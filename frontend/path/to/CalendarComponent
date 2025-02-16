@@ -1,0 +1,48 @@
+function CalendarComponent() {
+  // ... existing state and useEffect ...
+
+  return (
+    <div className="calendar-container">
+      <header className="calendar-header text-center">
+        <h2 className="text-primary">Medication Calendar</h2> {/* Changed text color */}
+      </header>
+      <div className="calendar">
+        <Calendar
+          onClickDay={handleDateClick}
+          value={selectedDate}
+          className="custom-calendar" // Added custom class for styling
+          tileClassName={({ date, view }) => {
+            // Highlight selected date
+            return date.toDateString() === selectedDate.toDateString() ? 'selected-date' : '';
+          }}
+        />
+      </div>
+      <style jsx>{`
+        .calendar-container {
+          margin: 20px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          background-color: #f9f9f9; /* Light background */
+        }
+        .calendar-header {
+          margin-bottom: 20px;
+        }
+        .custom-calendar {
+          border: none; /* Remove default border */
+        }
+        .selected-date {
+          background-color: #007bff; /* Highlight color */
+          color: white; /* Text color for selected date */
+          border-radius: 50%; /* Circular highlight */
+        }
+        .selected-date:hover {
+          background-color: #0056b3; /* Darker shade on hover */
+        }
+      `}</style>
+    </div>
+  );
+}
+
+// ... existing export ... 

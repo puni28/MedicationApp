@@ -1,0 +1,34 @@
+/* Header styles */
+.app-header {
+    color: #333;
+  /* Add your header styles here */
+}
+
+/* Footer styles */
+.app-footer {
+    color: #333;
+  /* Add your footer styles here */
+}
+
+/* Sidebar styles */
+.app-sidebar {
+    color: #333;
+    /* Add your sidebar styles here */
+}
+
+/* Main content layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+}

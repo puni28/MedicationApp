@@ -1,0 +1,62 @@
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.dashboard-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-list-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-list-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-link {
+  display: block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.dashboard-link:hover {
+  text-decoration: underline;
+}
+
+.medication-name, .symptom-name {
+  font-weight: bold;
+}
+
+.dose-time, .refill-date, .symptom-date {
+  color: #6c757d;
+  font-size: 0.9em;
+}
