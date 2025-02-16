@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Medicine Reminder</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  <script src="app.js" defer></script> <!-- External JS file for interaction -->
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Custom markers for different medications -->
+    
+    <a-marker type="pattern" url="markers/antifungal-cream-marker.patt" id="antifungal-cream-marker">
+      <a-cylinder color="red" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Antifungal Cream" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/fluconazole-marker.patt" id="fluconazole-marker">
+      <a-cylinder color="blue" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Fluconazole" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/terbinafine-marker.patt" id="terbinafine-marker">
+      <a-cylinder color="green" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Terbinafine" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/clotrimazole-marker.patt" id="clotrimazole-marker">
+      <a-cylinder color="yellow" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Clotrimazole" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/ketoconazole-marker.patt" id="ketoconazole-marker">
+      <a-cylinder color="orange" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Ketoconazole" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/omeprazole-marker.patt" id="omeprazole-marker">
+      <a-cylinder color="purple" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Omeprazole" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/ranitidine-marker.patt" id="ranitidine-marker">
+      <a-cylinder color="cyan" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Ranitidine" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/aspirin-marker.patt" id="aspirin-marker">
+      <a-cylinder color="magenta" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Aspirin" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/warfarin-marker.patt" id="warfarin-marker">
+      <a-cylinder color="brown" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Warfarin" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/benadryl-marker.patt" id="benadryl-marker">
+      <a-cylinder color="pink" height="0.1" radius="0.05"></a-cylinder>
+      <a-text value="Benadryl" position="0 0.2 0" color="#FFF"></a-text>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
